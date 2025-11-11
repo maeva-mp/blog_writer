@@ -6,10 +6,11 @@ import requests
 from tavily import TavilyClient
 from llama_index.llms.groq import Groq
 from datetime import datetime
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 
-st.write("Loaded secrets:", list(st.secrets.keys()))
 
 llm = Groq(
     model="llama-3.3-70b-versatile",
@@ -405,4 +406,5 @@ else:
     st.markdown("- 🎯 Competitive positioning analysis")
     st.markdown("- 📊 Detailed scoring across multiple dimensions")
     st.markdown("- 💡 Actionable optimization recommendations")
+
     
